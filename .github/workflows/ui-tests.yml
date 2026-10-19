@@ -22,7 +22,7 @@ jobs:
         run: pip install -r tests/ui/requirements-test.txt
 
       - name: Run UI tests
-        run: pytest tests/ui -v --junitxml test-results/results.xml
+        run: pytest tests/ui -v --screenshot on --junitxml test-results/results.xml
 
       - uses: actions/upload-artifact@v4
         if: always()
